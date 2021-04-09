@@ -5,11 +5,13 @@ import 'components/body.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Weather App'),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Weather App'),
+        ),
+        body: Body(),
       ),
-      body: Body(),
     );
   }
 }
