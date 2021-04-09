@@ -26,7 +26,6 @@ class NetworkHelper {
     );
     if (response.statusCode == 200) {
       List listOfCitiesWeather = jsonDecode(response.body)['list'];
-      print(listOfCitiesWeather);
       return listOfCitiesWeather
           .map((json) => CitiesWeather.fromJson(json))
           .toList();
