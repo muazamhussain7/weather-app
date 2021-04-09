@@ -5,24 +5,27 @@ class CitiesWeather {
   final String weatherCondition;
   final String cityName;
   final String countryName;
+  final String weatherIcon;
 
   CitiesWeather({
     this.temperature,
     this.minTemperature,
     this.maxTemperature,
     this.weatherCondition,
+    this.weatherIcon,
     this.cityName,
     this.countryName,
   });
 
   factory CitiesWeather.fromJson(Map<String, dynamic> json) {
     return CitiesWeather(
-      temperature: json['main']['temp'] as double,
-      minTemperature: json['main']['temp_max'] as double,
-      maxTemperature: json['main']['temp_min'] as double,
-      weatherCondition: json['weather'][0]['main'] as String,
-      cityName: json['name'] as String,
-      countryName: json['sys']['country'] as String,
+      temperature: json['main']['temp'].toDouble(),
+      minTemperature: json['main']['temp_max'].toDouble(),
+      maxTemperature: json['main']['temp_min'].toDouble(),
+      weatherCondition: json['weather'][0]['main'],
+      weatherIcon: json['weather'][0]['icon'],
+      cityName: json['name'],
+      countryName: json['sys']['country'],
     );
   }
 
@@ -34,6 +37,7 @@ class CitiesWeather {
       'weather': [
         {
           'main': instance.weatherCondition,
+          'icon': instance.weatherIcon,
         }
       ],
       'main': {

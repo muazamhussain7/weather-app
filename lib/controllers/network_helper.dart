@@ -6,6 +6,7 @@ import 'package:weather_app/models/cities_weather.dart';
 class NetworkHelper {
   static const _APIURL = 'api.openweathermap.org';
   static const _APIROUTE = '/data/2.5/group';
+  static const urlForWeatherIcon = 'http://openweathermap.org/img/w/';
   static const _APIKEY = 'abae32df2626399b7bb908d1648361b2';
   static const _citiesId =
       '1172451,1174872,1177662,1162015,3117735,1166548,1167528,1169684,1169825,2643743';

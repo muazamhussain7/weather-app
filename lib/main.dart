@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'views/home_screen.dart';
+import 'views/screens/homeScreen/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,9 +12,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weather App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: HomeScreen(),
     );
   }
