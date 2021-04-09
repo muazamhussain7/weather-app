@@ -15,7 +15,7 @@ class CitiesWeather {
     this.countryName,
   });
 
-  CitiesWeather fromJson(Map<String, dynamic> json) {
+  factory CitiesWeather.fromJson(Map<String, dynamic> json) {
     return CitiesWeather(
       temperature: json['main']['temp'] as double,
       minTemperature: json['main']['temp_max'] as double,
